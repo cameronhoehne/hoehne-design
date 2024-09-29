@@ -6,6 +6,7 @@
 
 /* CodeStitch Root and Helpers */
 @media only screen and (min-width: 0rem) {
+
     // Website colors
     :root {
         --primary: #ffba19;
@@ -14,7 +15,7 @@
         --secondaryLight: #001f3f;
         --headerColor: #1a1a1a;
         --bodyTextColor: #4e4b66;
-        --bodyTextColorWhite: #fafbfc;
+        --bodyTextColorWhite: #D5DEEF;
 
         /* 13px - 16px */
         --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -25,6 +26,7 @@
         /* 60px - 100px top and bottom */
         --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
     }
+
 
     // Text styles - can be replaced using CodeStitch's "Content Flair" Stitches
     .cs-topper {
@@ -82,6 +84,7 @@
 
         &:hover {
             color: #fff;
+
             &:before {
                 width: 100%;
             }
@@ -122,14 +125,16 @@
 
 /* Fonts and general styles */
 @media only screen and (min-width: 0rem) {
+
     body,
     html {
         margin: 0;
         overflow-x: hidden;
         padding: 0;
-        font-family: "Roboto", Arial, sans-serif;
+        font-family: "Rubik", Helvetica, Arial, sans-serif;
         font-size: 100%;
         color: var(--bodyTextColor);
+        background-color: #13171D;
     }
 
     *,
@@ -142,6 +147,18 @@
 
     body {
         transition: background-color 0.3s;
+    }
+
+    ::selection {
+        background: #C252A1;
+        color: #f7f7f7;
+        /* WebKit/Blink Browsers */
+    }
+
+    ::-moz-selection {
+        background: #C252A1;
+        color: #f7f7f7;
+        /* Gecko Browsers */
     }
 
     .container {
@@ -188,39 +205,101 @@
         left: 0;
         opacity: 0;
     }
-    // Grab your fonts to locally host from https://google-webfonts-helper.herokuapp.com/fonts
 
-    /* roboto-regular - latin */
+    // Grab your fonts to locally host from https://google-webfonts-helper.herokuapp.com/fonts
+    /* ubuntu-regular - latin */
     @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Ubuntu';
         font-style: normal;
-        font-family: "Roboto";
         font-weight: 400;
-        font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        src: url('../fonts/ubuntu-v20-latin-regular.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
-    /* roboto-700 - latin */
+
+    /* ubuntu-italic - latin */
     @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Ubuntu';
+        font-style: italic;
+        font-weight: 400;
+        src: url('../fonts/ubuntu-v20-latin-italic.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* ubuntu-500 - latin */
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Ubuntu';
         font-style: normal;
-        font-family: "Roboto";
+        font-weight: 500;
+        src: url('../fonts/ubuntu-v20-latin-500.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* ubuntu-700 - latin */
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Ubuntu';
+        font-style: normal;
         font-weight: 700;
-        font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        src: url('../fonts/ubuntu-v20-latin-700.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
-    /* roboto-900 - latin */
+
+    /* rubik-regular - latin */
     @font-face {
-        font-style: normal;
-        font-family: "Roboto";
-        font-weight: 900;
         font-display: swap;
-        src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/rubik-v28-latin-regular.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
+
+    /* rubik-italic - latin */
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Rubik';
+        font-style: italic;
+        font-weight: 400;
+        src: url('../fonts/rubik-v28-latin-italic.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* rubik-500 - latin */
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 500;
+        src: url('../fonts/rubik-v28-latin-500.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* rubik-700 - latin */
+    @font-face {
+        font-display: swap;
+        /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 700;
+        src: url('../fonts/rubik-v28-latin-700.woff2') format('woff2');
+        /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
 }
 
 /* Reset Margins */
 @media only screen and (min-width: 1024px) {
+
     body,
     html {
         margin: 0;
@@ -230,6 +309,7 @@
 
 /* Scale full website with the viewport width */
 @media only screen and (min-width: 3000px) {
+
     body,
     html {
         font-size: 0.55vw;
@@ -286,7 +366,7 @@
             z-index: 2;
             // Transition properties
             transition: transform 0.3s, opacity 0.3s;
-
+            fill: #fff;
             // fill: yellow; --> uncomment to change the color of the moon if needed
         }
 
@@ -330,20 +410,21 @@
     #cs-navigation {
         z-index: 10000;
         position: fixed;
-        background-color: #fff;
+        background-color: #13171D;
         width: 100%;
         /* prevents padding from affecting height and width */
         box-sizing: border-box;
         padding: (12/16rem) calc(16 / 16 * 1rem);
         /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-        font-family: "Roboto", "Arial", sans-serif;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        font-family: "Rubik", "Arial", sans-serif;
+        // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
         .cs-container {
             display: flex;
             justify-content: flex-end;
             align-items: center;
             width: 100%;
+            height: 6rem;
         }
 
         .cs-logo {
@@ -353,8 +434,8 @@
             align-items: center;
             margin: 0 auto 0 0;
             height: 100%;
-            max-width: (146/16rem);
-            width: 40%;
+            max-width: 18rem;
+            width: 80%;
             /* prevents padding from affecting height and width */
             box-sizing: border-box;
             padding: 0;
@@ -413,7 +494,7 @@
             left: 50%;
             transform: translateX(-50%);
             border-radius: 2px;
-            background-color: #1a1a1a;
+            background-color: #fff;
             height: 2px;
             width: 100%;
         }
@@ -488,27 +569,35 @@
             &:nth-of-type(1) {
                 transition-delay: 0.05s;
             }
+
             &:nth-of-type(2) {
                 transition-delay: 0.1s;
             }
+
             &:nth-of-type(3) {
                 transition-delay: 0.15s;
             }
+
             &:nth-of-type(4) {
                 transition-delay: 0.2s;
             }
+
             &:nth-of-type(5) {
                 transition-delay: 0.25s;
             }
+
             &:nth-of-type(6) {
                 transition-delay: 0.3s;
             }
+
             &:nth-of-type(7) {
                 transition-delay: 0.35s;
             }
+
             &:nth-of-type(8) {
                 transition-delay: 0.4s;
             }
+
             &:nth-of-type(9) {
                 transition-delay: 0.45s;
             }
@@ -577,6 +666,7 @@
                 opacity: 1;
                 transform: translateX(0);
             }
+
             &:before {
                 opacity: 1;
                 width: 100%;
@@ -769,39 +859,51 @@
             &:nth-of-type(1) {
                 transition-delay: 0.05s;
             }
+
             &:nth-of-type(2) {
                 transition-delay: 0.1s;
             }
+
             &:nth-of-type(3) {
                 transition-delay: 0.15s;
             }
+
             &:nth-of-type(4) {
                 transition-delay: 0.2s;
             }
+
             &:nth-of-type(5) {
                 transition-delay: 0.25s;
             }
+
             &:nth-of-type(6) {
                 transition-delay: 0.3s;
             }
+
             &:nth-of-type(7) {
                 transition-delay: 0.35s;
             }
+
             &:nth-of-type(8) {
                 transition-delay: 0.4s;
             }
+
             &:nth-of-type(9) {
                 transition-delay: 0.45s;
             }
+
             &:nth-of-type(10) {
                 transition-delay: 0.5s;
             }
+
             &:nth-of-type(11) {
                 transition-delay: 0.55s;
             }
+
             &:nth-of-type(12) {
                 transition-delay: 0.6s;
             }
+
             &:nth-of-type(13) {
                 transition-delay: 0.65s;
             }
@@ -871,21 +973,21 @@
     #cs-navigation {
         z-index: 10000;
         position: fixed;
-        background-color: #fff;
+        background-color: #13171D;
         width: 100%;
         /* prevents padding from affecting height and width */
         box-sizing: border-box;
         padding: 0 (16/16rem);
         /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-        font-family: "Roboto", "Arial", sans-serif;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        font-family: "Rubik", "Arial", sans-serif;
+        // box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
         .cs-container {
             display: flex;
             justify-content: flex-end;
             align-items: center;
             margin: auto;
-            max-width: (1280/16rem);
+            max-width: 90%;
             width: 100%;
             gap: (24/16rem);
         }
@@ -901,9 +1003,9 @@
             align-items: center;
             /* margin-right auto pushes everything away from it to the right */
             margin: 0 auto 0 0;
-            height: (65/16rem);
+            height: 10rem;
             max-width: (350/16rem);
-            width: 18.4%;
+            width: 30%;
             padding: 0;
 
             img {
@@ -934,13 +1036,15 @@
 
         .cs-li-link {
             position: relative;
+            padding: 0 1rem .2rem 1rem;
             display: block;
             margin: 0;
             text-decoration: none;
             /* 14px - 16px */
-            font-size: clamp(0.875rem, 1vw, 1rem);
+            font-size: clamp(0.875rem, 1.2vw, 1.2rem);
             line-height: 1.5em;
-            color: var(--bodyTextColor);
+            color: rgb(213, 222, 239);
+
             &:hover {
                 &:before {
                     width: 100%;
@@ -955,7 +1059,7 @@
                 content: "";
                 opacity: 1;
                 display: block;
-                background: var(--primary);
+                background: linear-gradient(90deg, #f54ea2 0, #ff7676 75%);
                 height: 2px;
                 width: 0%;
                 transition: width 0.3s;
@@ -995,235 +1099,6 @@
 }
 
 /*-- -------------------------- -->
-<---   Interior Page Header     -->
-<--- -------------------------- -*/
-
-/* Mobile */
-@media only screen and (min-width: 0rem) {
-    #int-hero {
-        z-index: 1;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 30vh;
-        padding-top: (50/16rem);
-
-        picture {
-            z-index: -2;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-
-        h1 {
-            position: relative;
-            margin: 0 auto;
-            margin-top: (70/16rem);
-            margin-bottom: (30/16rem);
-            max-width: (500/16rem);
-            width: 96%;
-            font-size: (64/30rem);
-            color: #fff;
-            text-align: center;
-        }
-
-        p {
-            display: block;
-            margin: auto;
-            margin-bottom: (30/16rem);
-            max-width: (400/16rem);
-            width: 96%;
-            color: #fff;
-            text-align: center;
-        }
-
-        &:before {
-            z-index: -1;
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: "";
-            opacity: 0.7;
-            display: block;
-            background: #000;
-            height: 100%;
-            width: 100%;
-        }
-    }
-}
-
-/* Tablet */
-@media only screen and (min-width: 48rem) {
-    #int-hero {
-        font-size: 100%;
-
-        h1 {
-            font-size: (64/16rem);
-        }
-    }
-}
-
-/* Small Desktop */
-@media only screen and (min-width: 64rem) {
-    #int-hero {
-        background-attachment: fixed;
-        min-height: (300/16rem);
-        height: auto;
-        padding-top: (180/16rem);
-        font-size: inherit;
-        padding-block-end: (100/16rem);
-    }
-}
-
-/*-- -------------------------- -->
-<---    Final Call To Action    -->
-<--- -------------------------- -*/
-
-/* Mobile */
-@media only screen and (min-width: 0rem) {
-    #cta {
-        position: relative;
-        padding: (50/16rem) 0;
-
-        .container {
-            text-align: center;
-        }
-
-        picture {
-            z-index: -2;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-        }
-
-        .title {
-            position: relative;
-            margin-bottom: (36/16rem);
-            font-size: ~"min(9vw, 3rem)";
-            line-height: (58/48em);
-            font-weight: 900;
-            color: #fff;
-            text-align: center;
-        }
-
-        p {
-            opacity: 1;
-            margin: auto;
-            margin-bottom: (36/16rem);
-            max-width: (598/16rem);
-            width: 96%;
-            color: #fff;
-            text-align: center;
-        }
-
-        &:before {
-            z-index: -1;
-            position: absolute;
-            top: 0;
-            left: 0;
-            content: "";
-            opacity: 0.7;
-            display: block;
-            background: #000;
-            height: 100%;
-            width: 100%;
-        }
-    }
-}
-
-/* Small Desktop */
-@media only screen and (min-width: 64rem) {
-    #cta {
-        padding: (168/16rem) 0;
-    }
-}
-
-/* Large Desktop */
-@media only screen and (min-width: 1300px) {
-    #cta {
-        position: relative;
-        margin-top: (100/16rem);
-        .container {
-            margin: auto;
-            width: 90.0625%;
-        }
-
-        picture {
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90.0625%;
-
-            &:before {
-                z-index: 1;
-                position: absolute;
-                top: 0;
-                left: 0;
-                content: "";
-                opacity: 0.7;
-                display: block;
-                background: #000;
-                height: 100%;
-                width: 100%;
-            }
-        }
-        &:before {
-            display: none;
-        }
-        &:after {
-            z-index: -3;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            content: "";
-            opacity: 1;
-            transform: translateX(-50%);
-            display: block;
-            background: url("/assets/svgs/cta-squares.svg");
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            height: (1108/16rem);
-            width: (2000/16rem);
-        }
-    }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #cta {
-            &:after {
-                display: none;
-            }
-        }
-    }
-}
-
-/*-- -------------------------- -->
 <---           Footer           -->
 <--- -------------------------- -*/
 
@@ -1233,119 +1108,23 @@
         background: #1c1c1c;
         padding: (84/16rem) 0 calc(20 / 16 * 1rem);
         font-size: ~"min(4vw, 1.2em)";
+        background-color: #13171D;
 
-        .left-section {
-            margin: auto;
-            margin-bottom: (50/16rem);
-            text-align: center;
-            .logo {
-                display: inline-block;
-                margin: auto;
-                margin-bottom: (30/16em);
-                height: (32/16em);
-                width: auto;
-                text-align: center;
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            background-color: #171b21;
 
-                img {
-                    display: block;
-                    height: 100%;
-                    width: auto;
-                }
-            }
-
-            p {
-                opacity: 0.9;
-                margin: auto;
-                width: 100%;
-                font-size: (14/16rem);
-                line-height: (27/14rem);
-                color: #fff;
-                text-align: center;
-            }
         }
 
-        .right-section {
-            margin: auto;
-            max-width: (407/16rem);
-            width: 96%;
-            .lists {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                margin: auto;
-                max-width: (307/16rem);
-                width: 96%;
-                ul {
-                    margin-top: 0;
-                    margin-bottom: 0;
-                    padding: 0;
-
-                    li {
-                        opacity: 0.9;
-                        margin-bottom: (12/16rem);
-                        list-style: none;
-                        font-size: (18/16rem);
-                        color: #fff;
-
-                        a {
-                            text-decoration: none;
-                            line-height: (21/18em);
-                            color: #fff;
-                            transition: color 0.3s;
-                            &:hover {
-                                color: var(--primary);
-                            }
-                        }
-                    }
-                    h2 {
-                        position: relative;
-                        margin-bottom: (37/16rem);
-                        text-transform: uppercase;
-                        font-size: (18/16rem);
-                        line-height: (21/18em);
-                        font-weight: bold;
-                        color: #fff;
-
-                        &:before {
-                            position: absolute;
-                            bottom: calc(-16 / 16 * 1rem);
-                            left: 0;
-                            content: "";
-                            opacity: 1;
-                            display: block;
-                            background: var(--primary);
-                            height: (2/16rem);
-                            width: (97/16rem);
-                        }
-                    }
-
-                    &:nth-of-type(3) {
-                        margin-top: (50/16rem);
-                        li {
-                            display: flex;
-                            justify-content: flex-start;
-                            align-items: center;
-                            margin-bottom: (16/16rem);
-
-                            &:last-of-type {
-                                margin-bottom: 0;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .buttons {
-                display: flex;
-                justify-content: center;
-            }
-
-            .cs-button-solid {
-                margin: 0;
-                height: (53/16rem);
-                width: (250/16rem);
-                padding-top: (3/16rem);
-            }
+        .copyright p {
+            color: #c1c1c1;
+            padding-top: 4rem;
+            font-size: 1.2rem;
+            font-family: "Ubuntu", Arial, sans-serif;
         }
 
         .credit {
@@ -1354,23 +1133,21 @@
             width: 96%;
             font-size: (16/16rem);
             line-height: (36/16rem);
-            color: #fff;
+            color: #c0c0c0;
             text-align: center;
 
             a {
                 text-decoration: none;
                 font-size: (16/16rem);
-                color: var(--primary);
+                background: linear-gradient(90deg, #f54ea2 0, #ff7676 75%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
 
                 &:hover {
                     text-decoration: underline;
                 }
             }
 
-            .copyright {
-                display: block;
-                font-size: (16/16rem);
-            }
         }
     }
 }
@@ -1379,97 +1156,7 @@
 @media only screen and (min-width: 64rem) {
     #footer {
         font-size: ~"min(1.2vw, 1em)";
-        .container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            margin: auto;
-            max-width: (1320/16rem);
-            width: 96%;
-            padding: 0;
-        }
 
-        .left-section {
-            margin: 0;
-            width: (409/16rem);
-            text-align: left;
 
-            .logo {
-                margin-left: 0;
-                height: (40/16rem);
-                text-align: left;
-            }
-
-            p {
-                margin-left: 0;
-                text-align: left;
-            }
-        }
-
-        .right-section {
-            margin: 0;
-            max-width: none;
-            width: (609/16rem);
-
-            .lists {
-                margin: 0;
-                max-width: (769/16rem);
-                width: 96%;
-
-                ul {
-                    li {
-                        a {
-                            position: relative;
-
-                            &:before {
-                                position: absolute;
-                                bottom: calc(-3 / 16 * 1rem);
-                                left: 0;
-                                content: "";
-                                opacity: 1;
-                                display: block;
-                                background: var(--primary);
-                                height: (2/16rem);
-                                width: 0%;
-                                transition: width 0.3s;
-                            }
-
-                            &:hover {
-                                &:before {
-                                    width: 100%;
-                                }
-                            }
-                        }
-                    }
-                    &:nth-of-type(3) {
-                        margin-top: 0;
-
-                        li:first-of-type {
-                            margin-bottom: 0;
-                        }
-                    }
-                }
-            }
-
-            .buttons {
-                justify-content: flex-start;
-            }
-        }
-
-        .credit {
-            .copyright {
-                display: inline-block;
-            }
-        }
-    }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #footer {
-            background: #061623;
-        }
     }
 }

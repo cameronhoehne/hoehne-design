@@ -15,6 +15,8 @@ const isProduction = configServer.isProduction;
 
 
 module.exports = function (eleventyConfig) {
+
+
     /**=====================================================================
           EXTENSIONS - Recognising non-default languages as templates 
     =======================================================================*/
@@ -98,6 +100,7 @@ module.exports = function (eleventyConfig) {
      *  https://moment.github.io/luxon/api-docs/index.html#datetime
      */
     eleventyConfig.addFilter("postDate", filterPostDate);
+    eleventyConfig.addFilter("jsonify", (data) => JSON.stringify(data));
     /**=====================================================================
                                     END FILTERS
     =======================================================================*/

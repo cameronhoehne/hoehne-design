@@ -1,6 +1,6 @@
 /* PAGE-SPECIFIC STYLES FOR THE ABOUT PAGE */
 /*-- -------------------------- -->
-<---           About            -->
+<---           Service          -->
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
@@ -21,7 +21,7 @@
     align-items: center;
     flex-direction: column;
     margin-top: 4rem;
-    padding: 4rem 0 4rem 0;
+    padding: 4rem 0.4rem 4rem 0.4rem;
     width: 100%;
     height: 100%;
   }
@@ -29,14 +29,13 @@
     z-index: 2;
     font-family: "Ubuntu", Arial, sans-serif;
     color: white;
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+    font-size: 4rem;
   }
   #about .hero p {
     z-index: 2;
     font-family: "Ubuntu", Arial, sans-serif;
+    font-size: 1.25rem;
     color: #8d949e;
-    font-size: 1.2rem;
   }
   #about .cs-picture {
     position: absolute;
@@ -44,7 +43,7 @@
     /* clips img tag corners */
     overflow: hidden;
     width: 100%;
-    height: 80%;
+    height: 100%;
   }
   #about .cs-picture img {
     position: absolute;
@@ -55,11 +54,44 @@
     /* makes image act like a background image */
     object-fit: cover;
   }
-  #about .about-container {
+  #about .services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 4rem 0.5rem 0 0.5rem;
+    max-width: 70rem;
     width: 100%;
+    height: 100%;
   }
-  #about .about-text p {
+  #about hr {
+    display: block;
+    height: 3px;
+    margin: 4rem;
+    width: 8rem;
+    background-color: #8D949E;
+    border-color: #8D949E;
+  }
+  #about .cs-picture-1 {
+    /* clips img tag corners */
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  #about .cs-picture-1 img {
+    height: auto;
+    width: 100%;
+    /* makes image act like a background image */
+    object-fit: cover;
+  }
+  #about .services-h2 {
+    font-family: "Ubuntu", Arial, sans-serif;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  #about .services-p p {
     color: #c1c1c1;
     font-size: 1.1rem;
     font-family: "Ubuntu", Arial, sans-serif;
@@ -99,6 +131,7 @@
   #about .hero p {
     z-index: 2;
     font-family: "Ubuntu", Arial, sans-serif;
+    font-size: 1.25rem;
     color: #8d949e;
   }
   #about .cs-picture {
@@ -118,11 +151,43 @@
     /* makes image act like a background image */
     object-fit: cover;
   }
-  #about .about-container {
+  #about .services-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 4rem 0.5rem 0 0.5rem;
+    max-width: 70rem;
     width: 80%;
+    height: 100%;
   }
-  #about .about-text p {
+  #about hr {
+    display: block;
+    height: 3px;
+    margin: 4rem;
+    width: 8rem;
+    background-color: #8D949E;
+    border-color: #8D949E;
+  }
+  #about .cs-picture-1 {
+    /* clips img tag corners */
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  #about .cs-picture-1 img {
+    height: auto;
+    width: 100%;
+    /* makes image act like a background image */
+    object-fit: cover;
+  }
+  #about .services-h2 {
+    font-family: "Ubuntu", Arial, sans-serif;
+    color: white;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+  }
+  #about .services-p p {
     color: #c1c1c1;
     font-size: 1.1rem;
     font-family: "Ubuntu", Arial, sans-serif;
