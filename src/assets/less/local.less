@@ -378,7 +378,8 @@
             position: relative;
             opacity: 0;
             transform: translateY(50px);
-            transition: opacity .4s ease-in, transform .6s ease-in;
+            transition: transform 1.5s cubic-bezier(0.010, -0.025, 0.250, 0.995),
+                opacity .5s ease-in;
             width: clamp(15rem, 30vw, 80rem);
             height: clamp(8rem, 18vw, 80rem);
 
@@ -497,7 +498,7 @@
     }
 
     #slider {
-        padding: 1rem .2rem 1rem .2rem;
+        padding: 1rem .2rem .4rem .2rem;
 
 
         .active {
@@ -510,7 +511,7 @@
             width: 100%;
             gap: .4rem;
             grid-auto-flow: column;
-            grid-auto-columns: 6%;
+            grid-auto-columns: clamp(4rem, 4%, 6rem; );
             height: 100%;
             overflow-x: auto;
             overscroll-behavior-inline: contain;
@@ -538,7 +539,7 @@
 
             .thumb-slider {
                 inline-size: 100%;
-                height: clamp(3rem, 4vw, 10rem);
+                height: clamp(2.5rem, 2.8vw, 10rem);
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -567,7 +568,7 @@
         height: 100%;
         background: rgba(0, 0, 0, .8);
         overflow: hidden;
-        z-index: 1;
+        z-index: 6;
     }
 
     .modal-content {
@@ -580,12 +581,12 @@
     }
 
     .modal-slider {
-        padding-top: 6rem;
         display: flex;
+        padding: 1rem 0 1rem 0;
         justify-content: flex-end;
         align-items: flex-end;
         flex-direction: column;
-        width: calc(70% - 14rem);
+        width: calc(78% - 2rem);
         min-width: 60rem;
     }
 
@@ -621,7 +622,7 @@
     .modal-prev,
     .modal-next {
         position: absolute;
-        top: 43%;
+        top: 50%;
         background: transparent;
         color: white;
         border: none;
