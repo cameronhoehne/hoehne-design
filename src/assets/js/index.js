@@ -334,51 +334,51 @@ document.addEventListener('DOMContentLoaded', function () {
     filterAllButton.addEventListener("click", (e) => {
         filterPortfolioItems(e.target.attributes[2].value)
         allFilterButtons.forEach(button => {
-            button.classList.remove("active")
+            button.classList.remove("filter-active")
         });
-        e.target.classList.add("active");
+        e.target.classList.add("filter-active");
     });
     const filterMotionGraphicsButton = document.getElementById("motion-graphics-btn");
     filterMotionGraphicsButton.addEventListener("click", (e) => {
         filterPortfolioItems(e.target.attributes[2].value);
         allFilterButtons.forEach(button => {
-            button.classList.remove("active")
+            button.classList.remove("filter-active")
         });
-        e.target.classList.add("active");
+        e.target.classList.add("filter-active");
 
     });
     const filterInfographicsButton = document.getElementById("infographics-btn");
     filterInfographicsButton.addEventListener("click", (e) => {
         filterPortfolioItems(e.target.attributes[2].value);
         allFilterButtons.forEach(button => {
-            button.classList.remove("active")
+            button.classList.remove("filter-active")
         });
-        e.target.classList.add("active");
+        e.target.classList.add("filter-active");
 
     });
     const filterCharacterAnimButton = document.getElementById("character-anim-btn");
     filterCharacterAnimButton.addEventListener("click", (e) => {
         filterPortfolioItems(e.target.attributes[2].value);
         allFilterButtons.forEach(button => {
-            button.classList.remove("active")
+            button.classList.remove("filter-active")
         });
-        e.target.classList.add("active");
+        e.target.classList.add("filter-active");
     });
     const filterVideoEditButton = document.getElementById("video-editing-btn");
     filterVideoEditButton.addEventListener("click", (e) => {
         filterPortfolioItems(e.target.attributes[2].value);
         allFilterButtons.forEach(button => {
-            button.classList.remove("active")
+            button.classList.remove("filter-active")
         });
-        e.target.classList.add("active");
+        e.target.classList.add("filter-active");
     });
     const filterRetailButton = document.getElementById("retail-btn");
     filterRetailButton.addEventListener("click", (e) => {
         filterPortfolioItems(e.target.attributes[2].value);
         allFilterButtons.forEach(button => {
-            button.classList.remove("active")
+            button.classList.remove("filter-active")
         });
-        e.target.classList.add("active");
+        e.target.classList.add("filter-active");
     });
 
     function filterPortfolioItems(itemCategory) {
