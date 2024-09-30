@@ -35,6 +35,7 @@ const modalSlider = document.querySelector(".modal-slider");
 
 let currIdx = 0;
 let slidesArray = [];
+let isModalOpen = false;
 
 function openModal(index) {
     slidesArray = [];
@@ -64,6 +65,11 @@ function openModal(index) {
     modal.style.display = "flex";
     //show slider here
     scrollToItem(currIdx);
+    if (!isModalOpen) {
+
+        main.classList.add("disabled")
+        isModalOpen = true;
+    }
 };
 
 function loadSlide(index) {
@@ -103,6 +109,10 @@ function handleModalClose() {
     modal.style.display = "none";
     modalSlider.innerHTML = "";
     sliderContainer.classList.add("center-slider");
+    if (isModalOpen) {
+        main.classList.remove("disabled");
+        isModalOpen = false;
+    }
 }
 
 modalPrev.addEventListener("click", () => {
@@ -117,17 +127,29 @@ modalNext.addEventListener("click", () => {
     scrollToItem(currIdx, "next");
 });
 
-window.onclick = function (e) {
+function handleTapOrClick(e) {
     if (e.target == modalBackground) {
         const links = document.querySelectorAll(".thumb-slider");
         links.forEach((item) => {
-            item.classList.remove("active")
-        })
+            item.classList.remove("active");
+        });
+
         modal.style.display = "none";
         modalSlider.innerHTML = "";
         sliderContainer.classList.add("center-slider");
+
+        if (isModalOpen) {
+            setTimeout(() => {
+                main.classList.remove("disabled");
+                isModalOpen = false;
+            }, 100);
+
+        }
     }
 }
+
+window.addEventListener('click', handleTapOrClick);
+window.addEventListener('touchstart', handleTapOrClick);
 
 // Scroller
 function getSliderItems() {
