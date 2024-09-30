@@ -171,10 +171,12 @@ function scrollToItem(idx, direction) {
         }
     })
     thumbnail.classList.add("active");
-    thumbnail.scrollIntoView({
-        behavior: "smooth",
-        inline: "center"
-    });
+    setTimeout(() => {
+        thumbnail.scrollIntoView({
+            behavior: "smooth",
+            inline: "center"
+        });
+    }, 10);
     if (isOverflown(sliderContainer)) {
         console.log('yes');
 
