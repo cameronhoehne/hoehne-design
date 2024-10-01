@@ -159,7 +159,7 @@ module.exports = {
             "title": "Urners – Friends & Family Event :30",
             "description": "Feels like home.",
             "image": "/assets/portfolio_images/URN_FriendsFamily.png",
-            "gif": "src/assets/portfolio_images/Urners_FriendsFamilyEvent.gif",
+            "gif": "/assets/portfolio_images/Urners_FriendsFamilyEvent.gif",
             "link": "https://www.youtube.com/embed/k8Eg-6-m6NU?feature=oembed"
         },
         {
@@ -402,7 +402,7 @@ module.exports = {
             "category": ["all", "character-animation", "retail"],
             "description": "All Character Animation Retail",
             "image": "/assets/portfolio_images/CarDude.png",
-            "gif": "src/assets/portfolio_images/CarDude.gif",
+            "gif": "/assets/portfolio_images/CarDude.gif",
             "link": "https://www.youtube.com/embed/VEEToCkv2TY?feature=oembed"
         },
         {
